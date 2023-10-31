@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/style.css">
+    <!-- Google fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;600;700;900;1000&display=swap" rel="stylesheet">
+</head>
+<body>
+   <div class="app">
+    <div class="container">
+        <header>
+            <div class="head">
+                <img src="palestine.png" alt="palestine" >
+                    <h2>مواقيت الصلاة</h2>
+                    <p>بتوقيت <span>القاهره</span></p>
+            </div>
+            <div class="select-city">
+                <select name="city" id="city" >
+                </select>
+            </div>
+           </header>
+           <!-- start Date Section -->
+           <section class="date">
+            <p class="hejry">التاريخ الهجرى</p>
+            <p class="day">الثلاثاء</p>
+            <p class="melady">التاريخ الميلادى</p>
+           </section>
+           <!-- start Times Section -->
+           <section class="times">
+            <div class="fajr">
+                <i class="fa-solid fa-cloud-moon"></i>
+                <p class="hour">07:10 pm</p>
+                <p>الفجر</p>
+            </div>
+            <div class="shrouq">
+                <i class="fa-solid fa-cloud-sun"></i>
+                <p class="hour">07:10 pm</p>
+                <p>الشروق</p>
+            </div>
+            <div class="zuhr">
+                <i class="fa-solid fa-sun"></i>
+                <p class="hour">07:10 pm</p>
+                <p>الظهر</p>
+            </div>
+            <div class="asr">
+                <i class="fa-regular fa-sun"></i>
+                <p class="hour">07:10 pm</p>
+                <p>العصر</p>
+            </div>
+            <div class="magrib">
+                <i class="fa-solid fa-mountain-sun"></i>
+                <p class="hour">07:10 pm</p>
+                <p>المغرب</p>
+            </div>
+            <div class="isha">
+                <i class="fa-solid fa-moon"></i>
+                <p class="hour">07:10 pm</p>
+                <p>العشاء</p>
+            </div>
+           </section>
+       </div>
+   </div>
+</body>
+<script src="script.js"></script>
+</html>

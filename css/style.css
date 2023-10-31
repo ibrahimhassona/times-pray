@@ -1,0 +1,238 @@
+:root{
+    --main-font:  'Cairo', sans-serif;
+    --bg-color:#393646;
+    --section-colir:#4F4557;
+    --small-sec-color:#6D5D6E;
+    --f-color:#F4EEE0;
+    --Tr:0.5;
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+}
+::-webkit-scrollbar {
+    height: 12px;
+    width: 12px;
+    background: var(--small-sec-color);
+}
+
+::-webkit-scrollbar-thumb {
+    background: #393812;
+    -webkit-border-radius: 1ex;
+    -webkit-box-shadow: 0px 1px 2px rgba(0, 0, 0, 0.75);
+}
+
+body{
+    margin: 0;
+}
+.app{
+    background-color: var(--bg-color);
+    height: 100vh;
+}
+.container{
+    height: inherit;
+    background-color: inherit;
+    margin-right: 50px;
+    margin-left: 50px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+
+}
+header{
+    position: relative;
+    font-family: var(--main-font);
+    color: var(--f-color);
+    padding-top: 50px;
+    padding-bottom: 35px;
+    width: 100%;
+}
+header .select-city{
+    position: absolute;
+    top: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: fit-content;
+    right: 0;
+    overflow: hidden;
+    max-height: 260px;
+}
+header .select-city select{
+    background: none;
+    color: var(--f-color);
+    border-radius: 4px;
+    border: 1px solid var(--f-color);
+    transition: var(--Tr);
+    width: 100%;
+    outline: none;
+    font-size: 17px;
+}
+header .select-city select option{
+    background:var(--bg-color) ;
+    text-align: center;
+    font-size: 14px;
+    width: fit-content;
+}
+
+option:checked,
+option:hover {
+  box-shadow: 0 0 10px 100px var(--section-colir) inset;
+}
+img{
+    width: 160px;
+}
+.head{
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+header i{
+    font-size: 60px;
+    color: #4ef9c0;
+
+}
+header h2{
+    font-size: 40px;
+    font-weight: bolder;
+    color: #f9c37a;
+}
+
+/* start Date Section */
+.date{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px 0 20px;
+    color: var(--f-color);
+    font-family: var(--main-font);
+    font-weight: 600;
+    font-size: 22px;
+    background: var(--small-sec-color);
+    border-radius: 5px;
+    width: 100%;
+
+}
+.date p{
+    padding: 5px;
+}
+
+/* start Times Section */
+.times{
+    width: 100%;
+    background: var(--section-colir);
+    padding: 20px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    height: 30%;
+}
+.times div{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    min-height: 65%;
+    padding: 10px 7px;
+    border-radius: 5px;
+    width: 80px;
+    background: var(--bg-color);
+    cursor: pointer;
+    transition: var(--Tr);
+}
+.times p{
+    font-family: var(--main-font);
+    color: var(--f-color);
+    font-weight: 600;
+}
+.alarm{
+    background: transparent;
+    padding: 10px;
+    animation-name: pray-alarm;
+    transition: var(--Tr);
+    animation-duration: 1.5s;
+    animation-iteration-count: infinite;
+    animation-timing-function:ease-in-out;
+    animation-direction: alternate;
+    color: var(--f-color);
+    font-family: var(--main-font);
+    border-radius: 5px;
+    font-size: 15px;
+    width: fit-content;
+    margin: 15px auto 0;
+}
+.times i{
+    font-size: 35px;
+}
+.times .fajr i{
+    color: #d1d1d1;
+}
+.times .shrouq i{
+    color: #f3ce9d;
+}
+.times .zuhr i{
+    color: #ffc61c;
+}
+.times .asr i{
+    color: #e6d08f;
+}
+.times .magrib i{
+    color: #607D8B;
+}
+.times .isha i{
+    color: #f9d59f;
+}
+/* Stat Media Query */
+@media(max-width: 680px){
+    header h2{
+        font-size: 30px;
+    }
+    header i{
+        font-size: 50px;
+    }
+    .date  {
+       font-size: 15px;
+    }
+    .times {
+        display: grid;
+        grid-template-columns: auto auto auto;
+        height: fit-content;
+        gap: 10px
+    } 
+    .times div{
+        width: 70px;
+        height: 100px;
+        padding: 10px 2px;
+    }
+
+    .times p{
+        font-size: 14px;
+        font-weight: 100;
+    }
+    .times i{
+        font-size: 25px;
+    }
+    .container{
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    header .select-city select{
+        font-size: 14px;
+    }
+}
+@keyframes pray-alarm{
+    from{
+        opacity: 0;
+    };
+    to{
+        opacity: 1;
+    }
+}
